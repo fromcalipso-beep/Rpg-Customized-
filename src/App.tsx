@@ -451,8 +451,13 @@ export default function App() {
     <div className="min-h-screen flex flex-col lg:flex-row bg-[var(--bg-canvas)] text-[var(--text-primary)]">
       {/* Desktop Sidebar */}
       <aside className="hidden lg:flex lg:flex-col lg:w-68 lg:shrink-0 border-r border-[var(--border-subtle)] bg-[var(--bg-sidebar)] sticky top-0 h-screen">
-        <div className="px-5 py-5 border-b border-[var(--border-subtle)]">
-          <span className="font-display text-lg font-bold tracking-tight text-[var(--text-primary)] block whitespace-nowrap">
+        <div className="px-4 py-4 border-b border-[var(--border-subtle)] flex items-center gap-2.5">
+          <img
+            src="/app-icon.png"
+            alt="RPG Character Manager"
+            className="w-7 h-7 rounded-lg object-cover border border-[var(--border-strong)] shrink-0"
+          />
+          <span className="font-display text-sm font-bold tracking-tight text-[var(--text-primary)] whitespace-nowrap">
             RPG Character Manager
           </span>
         </div>
@@ -546,6 +551,12 @@ export default function App() {
         {/* Compact Sticky Top Bar (Desktop & Mobile) */}
         <header className="sticky top-0 z-30 h-12 lg:h-14 px-4 sm:px-6 border-b border-[var(--border-subtle)] bg-[var(--bg-header)] backdrop-blur-md flex items-center justify-between gap-4">
           <div className="flex items-center gap-2 min-w-0">
+            <img
+              src="/app-icon.png"
+              alt=""
+              aria-hidden="true"
+              className="lg:hidden w-6 h-6 rounded-md object-cover border border-[var(--border-strong)] shrink-0"
+            />
             <span className="lg:hidden font-display text-sm font-bold text-[var(--text-primary)] truncate">
               {activeCharacter ? activeCharacter.identity.name : 'RPG Manager'}
             </span>

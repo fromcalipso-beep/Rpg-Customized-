@@ -232,9 +232,16 @@ export const StartAdventureView: React.FC<StartAdventureViewProps> = ({
     >
       {/* Clean Minimal Top Bar */}
       <header className="px-3 sm:px-8 py-3.5 sm:py-4 border-b border-[var(--border-subtle)] bg-[var(--bg-sidebar)] flex items-center justify-between gap-2 sm:gap-4">
-        <span className="font-display text-sm sm:text-lg font-bold tracking-tight text-[var(--text-primary)] truncate min-w-0">
-          RPG Character Manager
-        </span>
+        <div className="flex items-center gap-2.5 min-w-0">
+          <img
+            src="/app-icon.png"
+            alt="RPG Character Manager"
+            className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg object-cover border border-[var(--border-strong)] shrink-0"
+          />
+          <span className="font-display text-sm sm:text-lg font-bold tracking-tight text-[var(--text-primary)] truncate min-w-0">
+            RPG Character Manager
+          </span>
+        </div>
 
         {existingCharactersCount > 0 && onReturnToWorkspace && (
           <button
